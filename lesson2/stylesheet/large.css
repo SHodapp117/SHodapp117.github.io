@@ -1,0 +1,14 @@
+/* the @media says that this file will only apply if the screen
+is 64em. */
+
+@media only screen and (min-width: 64em) {
+
+    /* id selectors */
+    #grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 4em;
+    }
+
+
+}
