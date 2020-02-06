@@ -1,0 +1,10 @@
+@media only screen and (min-width: 64em) {
+
+    .contentleft {
+        padding-left: 6em;
+    }
+
+    #grid {
+        padding: 1em;
+    }
+}
