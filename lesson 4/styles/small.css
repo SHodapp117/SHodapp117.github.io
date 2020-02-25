@@ -1,3 +1,6 @@
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #465775;
@@ -9,6 +12,13 @@ body {
 header{
     margin-top: 10%;
 
+}
+nav ul li a {
+    display: block;
+    /* padding: .8rem 2%; */
+    text-decoration: none;
+    color: #000;
+    border-top:1px solid rgba(8, 8, 8, 0.3);
 }
 nav{
     margin: auto;
@@ -40,33 +50,46 @@ a {
     padding: .8em;
 }
 .contentcenter {
+    align-content: center;
     padding: 5em;
     padding-bottom: 9em;
 
 }
+
+
 h1{
+    align-content: center;
     margin-top: 0em;
     font-size: larger;
     font-weight: bold;
     color: #5b6c5d;
 }
 h2{
+    align-content: center;
     margin-top: 0em;
     font-size: larger;
     font-weight: bold;
     color: #5b6c5d;
 }
 h3{
+    align-content: center;
     margin-top: 0em;
     font-size: larger;
     font-weight: bold;
     color: #5b6c5d;
 }
 h4{
+    align-content: center;
     margin-top: 0em;
     font-size: larger;
     font-weight: bold;
     color: #5b6c5d;
+}
+
+h6{
+    color: aliceblue;
+    font-size: larger;
+    font-weight: 200;
 }
 
 
