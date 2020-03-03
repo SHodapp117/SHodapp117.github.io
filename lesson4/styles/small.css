@@ -1,6 +1,4 @@
 
-
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #465775;
@@ -13,6 +11,15 @@ header{
     margin-top: 10%;
 
 }
+
+nav ul li:first-child {
+    display: block;
+}
+
+nav ul li {
+    display: none;
+}
+
 nav ul li a {
     display: block;
     /* padding: .8rem 2%; */

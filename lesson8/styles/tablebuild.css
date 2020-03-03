@@ -1,0 +1,44 @@
+
+td {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    padding: 910x;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+table,
+caption {
+    box-shadow: 10px 10px 5px #628ca6;
+}
+
+tbody tr:nth-child {
+    background-color: #e7f0ed;
+}
+
+caption,
+tfoot td {
+    background-color: #7fb9c2;
+}
+
+caption {
+    font-weight: 750;
+    font-size: 25px;
+}
+
+tbody tr:nth-child(5) td:nth-child(1) {
+    font-style: italic;
+}
+
+tfoot tr td {
+    font-size: 14px;
+}
+
+.row-color {
+    background-color: #e7ffed;
+}
+
+#cells {
+    background-color: #628ca6;
+    color: white;
+}
