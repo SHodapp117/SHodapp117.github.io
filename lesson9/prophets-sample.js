@@ -2,10 +2,10 @@ fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.
     .then(result => {
         return result.json();
     })
-    .then(prophetList =>{
+    .then(prophetList => {
         let prophets = prophetList.prophets;
-        
-        prophets.forEach( 
+
+        prophets.forEach(
             prophet => {
                 let article = document.createElement('article');
 
@@ -20,7 +20,7 @@ fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.
 
                 let image = document.createElement('img');
                 image.setAttribute('src', prophet.imageurl);
-                image.setAttribute('alt',`${prophet.name} ${prophet.lastname}`)
+                image.setAttribute('alt', `${prophet.name} ${prophet.lastname}`)
 
                 article.appendChild(h1);
                 article.appendChild(dateOfBirth);
@@ -29,7 +29,7 @@ fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.
 
                 document.querySelector('#prophets').appendChild(article);
 
-        
+
             });
-        
+
     });
