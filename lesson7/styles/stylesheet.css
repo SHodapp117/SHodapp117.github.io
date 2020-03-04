@@ -1,13 +1,21 @@
 article img[data-src] {
-    filter: blur(0.2em);
+    filter: blur(0.5em);
   }
   
   article img {
     filter: blur(0em);
-    transition: filter 1s;
+    transition: filter 4s;
   }
 
 .pictures {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+body{
+    background-color: slategray;
+}
+
+footer{
+    background-color: slateblue;
 }
