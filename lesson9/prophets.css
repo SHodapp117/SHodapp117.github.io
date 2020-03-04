@@ -1,0 +1,42 @@
+article{
+    background-color:mintcream;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: goldenrod;
+}
+
+body{
+    box-shadow: 0 0 18px grey;
+}
+
+h1{
+    color: black ;
+}
+
+header{
+    text-align: center;
+    color: blue;
+    font-weight: bolder;
+}
+
+img{
+    max-width: 200px;
+    max-height: 200px ;
+    box-shadow: 0 0 20px grey;
+}
+
+@media only screen and (min-width:32.5em){
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 60em){
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
