@@ -1,0 +1,133 @@
+<!DOCTYPE html5>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preston Town Page</title>
+    <meta name="description" content="The Start of the Preston Page for Betterweather.tech">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+
+<body>
+    <aside class="hidden">
+        <p id="pancakes">Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+    </aside>
+    <header>
+        <img src="images/logo.jpg" alt="Site Logo">
+        <div id="motto">
+            <h6>Motto: AAAAAAH! Weather!</h6>
+            <nav>
+
+                <ul class="navigation">
+                    <li>
+                        <a class="ham" href="#">&#9776; Menu</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="preston-5.html">Preston</a>
+                    </li>
+                    <li>
+                        <a href="#">Soda Springs</a>
+                    </li>
+                    <li>
+                        <a href="#">Fish Haven</a>
+                    </li>
+                    <li>
+                        <a href="#">Storm Center</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <main class="grid">
+        <section id="weathersum">
+            <article id="weathersummary">
+                <h1>Weather Summary</h1>
+                <div>
+                    <span>Current Temperature:</span>
+                    <span id="currenttemp"></span>
+                </div>
+                <div>
+                    <span>Wind Speed:</span>
+                    <span id="windspeed"></span>
+                </div>
+                <div>
+                    <span>Humidity:</span>
+                    <span id="humidity"></span>
+                </div>
+            </article>
+        </section>
+        <section id="fiveforecast">
+            <table>
+                <caption>Five-day Forecast</caption>
+                <thead>
+                    <tr>
+                        <th id="day1">Day 1</th>
+                        <th id="day2">Day 2</th>
+                        <th id="day3">Day 3</th>
+                        <th id="day4">Day 4</th>
+                        <th id="day5">Day 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="temp1">50&deg;</td>
+                        <td id="temp2">50&deg;</td>
+                        <td id="temp3">50&deg;</td>
+                        <td id="temp4">50&deg;</td>
+                        <td id="temp5">50&deg;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="articles">
+
+            <article id="article">
+                <img id="article_image" src="images/smalltown.jpeg" alt="Picture of the city">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem laboriosam suscipit
+                    delectus. Tempore illo, quae voluptatibus magnam quas modi rem aut delectus possimus dignissimos,
+                    quasi
+                    numquam neque eum esse.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem laboriosam suscipit
+                    delectus. Tempore illo, quae voluptatibus magnam quas modi rem aut delectus possimus dignissimos,
+                    quasi
+                    numquam neque eum esse.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati voluptatibus, perferendis
+                    sapiente facilis dolorem harum perspiciatis qui dignissimos, illo atque alias nulla, iste labore
+                    possimus reprehenderit distinctio libero. Odit!
+                </p>
+            </article>
+        </section>
+        <section id="contactinfo" class="flex">
+            <address>
+                <h2>Better Weather</h2> <br>
+                1234 Main Street <br>
+                South Canada Idaho <br>
+                999-999-9999
+            </address>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.0082163285306!2d-111.7852707850351!3d43.81418897911612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540b03c3c8b0cd%3A0xfd28a97e4cccebc!2s525%20S%20Center%20St%2C%20Rexburg%2C%20ID%2083460!5e0!3m2!1sen!2sus!4v1581010148905!5m2!1sen!2sus"
+                width="40%" frameborder="0" style="border:0;" allowfullscreen="">
+            </iframe>
+        </section>
+        <footer>
+            <p>&copy; Better Weather ||| Spencer Hodapp </p>
+
+            <script src="scripts/main.js"></script>
+
+        </footer>
+    </main>
+</body>
+
+</html>

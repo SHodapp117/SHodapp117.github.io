@@ -1,0 +1,45 @@
+@media only screen and (min-width: 32.5em) {
+
+    header {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation {
+        display: flex;
+        
+    }
+
+    .navigation li{
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation li:first-child {
+        display: none;
+
+    }
+
+    #fiveforecast{
+        background-color: #B8F8FF;
+        text-align-last: center;
+        color: black;
+        opacity: .2;
+        display: flex;
+        justify-content: right;
+    }
+
+    iframe {
+        display: block;
+    }
+
+    #weathersum{
+        background-color: #F2F2F2;
+        left: 20%;
+        padding: 10px;
+        position: absolute;
+        top: auto;
+        opacity: .8;
+    }
+
+}
