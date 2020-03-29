@@ -1,17 +1,10 @@
-/*
-* base css
-* smartphone screen
-*/
-
-/* html selectors */
-
 body {
-    background-color: #f1f4f3;
+    background-color: #465775;
 }
 
 ul li a {
     text-decoration: none;
-    color: #f1f4f3;
+    color: black;
 }
 
 header {
@@ -29,7 +22,7 @@ header img {
 
 ul {
     list-style: none;
-    background-color: #343d50;
+    background-color: #abebd2;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,8 +32,8 @@ ul {
 }
 
 ul, h1, h2 {
-    font-family: 'Josefin Sans', sans-serif;
-    color:  #a3b7af;
+    font-family: 'Roboto', sans-serif;
+    color:  black;
 }
 
 h3, p, td, span, address, figcaption, form{
@@ -68,12 +61,12 @@ main {
 
 section {
     padding: 12px;
-    border: 2px dotted #9D866B;
+    border: 2px  slategray;
     margin-top: 10px;
 }
 
 a:active {
-    background-color: #a3b7af;
+    background-color: grey;
     color: white;
     padding: 6px 6px;
     text-align: center;
@@ -81,38 +74,42 @@ a:active {
 }
 
 a:hover {
-    background-color: #a3b7af;
+    background-color:grey;
     color: white;
     padding: 6px 6px;
     text-align: center;
     display: inline-block;
+    border-style: double;
+    border-color: #56e39f;
+    font-size: 15px;
 }
 
+
 footer {
-    background-color: #343d50;
+    background-color: #5b6c5d;
     height: 80px;
     text-align: center;
 }
 
 footer p {
     padding: 30px;
-    color: #f1f4f3;
+    color: paleturquoise;
 }
 
 table {
     margin-left: auto; 
     margin-right: auto;
-    color: #82746B;
+    color: lightblue;
 }
 
 table, th, tr, td{
-    border: 1px solid black;
+    border: 1px solid seagreen;
     padding: 7px;
     font-size: 20px;
 }
 
 table th {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 iframe{
@@ -123,9 +120,9 @@ aside {
     position: absolute;
     top: 60px;
     left: 60px;
-    background-color: #9D866B;
+    background-color: slategrey;
     opacity: 0.67;
-    color: #f1f4f3;
+    color: seagreen;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -152,11 +149,10 @@ input[type=submit], input[type=reset] {
     margin-top: 15px;
     cursor: pointer;
     padding: 8px 8px;
-    background-color: #9D866B;
+    background-color: fuchsia;
     width: 80px;
 }
 
-/* class selectors */
 
 img[data-src] {
     filter: blur(0.1em);
@@ -199,7 +195,6 @@ img {
     padding: 5px;
 }
 
-/* id selector */
 
 #website {
     font-size: 40px;
@@ -226,9 +221,9 @@ img {
     position: absolute;
     top: 60px;
     right: 60px;
-    background-color: #9D866B;
+    background-color: slategray;
     opacity: 0.67;
-    color: #f1f4f3;
+    color: black;
     padding-left: 20px;
     padding-right: 20px;
 }

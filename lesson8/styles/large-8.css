@@ -1,5 +1,3 @@
-/* desktop/laptop screen */
-
 @media only screen and (min-width: 64em) {
     ul {
         display: flex;
@@ -28,6 +26,6 @@
     }
 
     figure:hover {
-        box-shadow: 2px 4px 8px 1px #82746B, 1px 6px 20px 2px #82746B;
+        box-shadow: 2px 4px 8px 1px slategray, 1px 6px 20px 2px steelblue;
     }
 }
