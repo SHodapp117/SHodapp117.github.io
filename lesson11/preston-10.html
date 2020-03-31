@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preston Town Page</title>
+    <link rel="icon" type="image/gif" sizes="16x16" href="images/icon.gif">
+    <meta name="description" content="The Start of the Preston Page for Betterweather.tech">
+    <link rel="stylesheet" href="styles/small-10.css">
+    <link rel="stylesheet" href="styles/medium-10.css">
+    <link rel="stylesheet" href="styles/large-10.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    </head>
+<body>
+    <header>
+        <img src="images/icon.gif" alt="weather logo">
+        <div class="header">
+            <h1 id="website">Betterweather.tech</h1>
+            <h3>Motto: AAAAAAH! Weather!</h3>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a class="ham" href="#">&#9776; Menu</a></li>
+            <li><a href="weathersitefinal.html">Home</a></li>
+            <li><a href="preston-10.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery-7.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 id="preston">Preston</h1>
+        <section id="hero">
+            
+            <picture>
+                <source srcset="images/soda.jpeg" media ="(max-width: 500px)">
+                <source srcset="images/smalltown.jpeg" media="(max-width: 780px)">
+                <source srcset="images/cit230_image_franklinOriginal.jpeg" media="(max-width: 1050px)">
+                <img src="images/cit230_image_franklinOriginal.jpeg" alt="hero image">
+            </picture>
+            <article id="weather-summary">
+                <h2>Weather Summary</h2>
+                <div>
+                    <span id="weatherDesc"></span>
+                    <img id="weatherImg" src="" alt="" >
+                </div>
+                <div>
+                    <span>Current Temperature:</span>
+                    <span id="current-temp"></span>
+                </div>
+                <div>
+                    <span>Wind Speed:</span>
+                    <span id="wind-speed"></span>
+                </div>
+                <div>
+                    <span>Humidity:</span>
+                    <span id="humidity"></span>
+                </div>
+                <div>
+                    <span>Wind Chill:</span>
+                    <span id="windChill"></span>
+                </div>
+            </article>
+            <aside>
+                <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+            </aside>
+        </section>
+        <section id="five-day-forecast">
+            <table>
+                <tr>
+                    <th colspan="5">Five Day Forecast</th>
+                </tr>
+                <tr>
+                    <td id="day1"></td>
+                    <td id="day2"></td>
+                    <td id="day3"></td>
+                    <td id="day4"></td>
+                    <td id="day5"></td>
+                </tr>
+                <tr>
+                    <td><img id="img1" src="" alt=""></td>
+                    <td><img id="img2" src="" alt=""></td>
+                    <td><img id="img3" src="" alt=""></td>
+                    <td><img id="img4" src="" alt=""></td>
+                    <td><img id="img5" src="" alt=""></td>
+                </tr>
+                <tr>
+                    <td id="temp1"></td>
+                    <td id="temp2"></td>
+                    <td id="temp3"></td>
+                    <td id="temp4"></td>
+                    <td id="temp5"></td>
+                </tr>
+            </table>
+        </section>
+        <section id="article">
+            <img src="images/smalltown.jpeg" alt="Preston, ID">
+            <p> Latest News from The Preston Presser:</p>
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eos aspernatur earum fugit reiciendis hic dolorum reprehenderit. 
+                Porro animi, aliquam dolorum aperiam adipisci aspernatur laboriosam delectus dolores, 
+                mollitia quibusdam officiis iure? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Harum, necessitatibus. Ab quisquam quidem dolorem corrupti aliquid, laborum aut. 
+                Cupiditate eius ea inventore ad nobis deleniti id excepturi labore veritatis quisquam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit dolore, 
+                expedita id officiis eius voluptas dicta fugiat, consectetur dolorem quia commodi similique vero 
+                exercitationem dignissimos mollitia suscipit ut incidunt.
+                </p>
+        </section>
+        <section id="contact">
+            <address>
+                <h3>Better Weather</h3> <br>
+                1234 Main Street <br>
+                South Canada Idaho <br>
+                999-999-9999 <br>
+                betterweather@gmail.com
+            </address>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54766.67601801872!2d-111.91534435880683!3d42.09974162641247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e1!3m2!1sen!2sus!4v1581204904345!5m2!1sen!2sus" 
+            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </section>
+    </main>
+    <footer>
+        <p> Weather API from OpenWeatherMap, used with thanks </p>
+        <p>&copy; Better Weather ||| Spencer Hodapp <span id="currentDate"></span> </p>
+    </footer>
+    <script src="scripts/webfontloader.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
