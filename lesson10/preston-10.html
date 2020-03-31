@@ -7,9 +7,9 @@
     <title>Preston Town Page</title>
     <link rel="icon" type="image/gif" sizes="16x16" href="images/icon.gif">
     <meta name="description" content="The Start of the Preston Page for Betterweather.tech">
-    <link rel="stylesheet" href="styles/small-8.css">
-    <link rel="stylesheet" href="styles/medium-8.css">
-    <link rel="stylesheet" href="styles/large-8.css">
+    <link rel="stylesheet" href="styles/small-10.css">
+    <link rel="stylesheet" href="styles/medium-10.css">
+    <link rel="stylesheet" href="styles/large-10.css">
     <link rel="stylesheet" href="styles/normalize.css">
     </head>
 <body>
@@ -23,27 +23,30 @@
     <nav>
         <ul class="navigation">
             <li><a class="ham" href="#">&#9776; Menu</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="preston-8.html">Preston</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston-10.html">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
             <li><a href="#">Fish Haven</a></li>
             <li><a href="stormcenter.html">Storm Center</a></li>
-            <li><a href="gallary-8.html">Gallary</a></li>
+            <li><a href="gallery-10.html">Gallery</a></li>
         </ul>
     </nav>
     <main>
         <h1 id="preston">Preston</h1>
         <section id="hero">
-           
+            
             <picture>
                 <source srcset="images/hero_small.jpg" media ="(max-width: 500px)">
                 <source srcset="images/hero_medium.jpg" media="(max-width: 780px)">
                 <source srcset="images/hero_large.jpg" media="(max-width: 1050px)">
                 <img src="images/cit230_image_franklinOriginal.jpeg" alt="hero image">
             </picture>
-
             <article id="weather-summary">
                 <h2>Weather Summary</h2>
+                <div>
+                    <span id="weatherDesc"></span>
+                    <img id="weatherImg" src="" alt="" >
+                </div>
                 <div>
                     <span>Current Temperature:</span>
                     <span id="current-temp"></span>
@@ -71,11 +74,25 @@
                     <th colspan="5">Five Day Forecast</th>
                 </tr>
                 <tr>
-                    <td>36&deg; / 20&deg;</td>
-                    <td>40&deg; / 32&deg;</td>
-                    <td>42&deg; / 33&deg;</td>
-                    <td>35&deg; / 28&deg;</td>
-                    <td>35&deg; / 28&deg;</td>
+                    <td id="day1"></td>
+                    <td id="day2"></td>
+                    <td id="day3"></td>
+                    <td id="day4"></td>
+                    <td id="day5"></td>
+                </tr>
+                <tr>
+                    <td><img id="img1" src="" alt=""></td>
+                    <td><img id="img2" src="" alt=""></td>
+                    <td><img id="img3" src="" alt=""></td>
+                    <td><img id="img4" src="" alt=""></td>
+                    <td><img id="img5" src="" alt=""></td>
+                </tr>
+                <tr>
+                    <td id="temp1"></td>
+                    <td id="temp2"></td>
+                    <td id="temp3"></td>
+                    <td id="temp4"></td>
+                    <td id="temp5"></td>
                 </tr>
             </table>
         </section>
