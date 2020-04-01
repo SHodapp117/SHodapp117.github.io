@@ -1,4 +1,3 @@
-
 // current date
 var cd = new Date();
 
@@ -54,6 +53,37 @@ document.querySelector('#current-temp').innerHTML = temp + '&deg;'; //'50&deg;'
 document.querySelector('#wind-speed').innerHTML = windSpeed + 'mph'; //'10mph'
 document.querySelector('#humidity').innerHTML = '40&percnt;';
 
+// Five Day Weatherforecast 
+function getFiveDayForecast(cityId) {
+
+    // five day forecast data
+    const apiURL2 = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityId + "&appid=ed727a759e7ac69ef5e052c8da5f94d9&units=imperial";
+    
+    fetch(apiURL2)
+      .then((response) => response.json())
+      .then(
+        jsObject => {
+            let counter = 1;
+            jsObject.list.forEach(
+                forecast => {
+                    if(forecast.dt_txt.includes('18:00')) {
+                        let forecastDate = new Date(forecast.dt_txt.replace(' ', 'T'));
+                        let dayOfWeek = daysOfWeek[forecastDate.getDay()];
+                        let imageURL = 'https://openweathermap.org/img/w/' + jsObject.list[counter].weather[0].icon + '.png';
+    
+                        document.querySelector(`#day${counter}`).innerHTML = dayOfWeek;
+    
+                        document.querySelector(`#temp${counter}`).innerHTML = forecast.main.temp.toFixed(0) + '&deg;' + 'F';
+    
+                        document.querySelector(`#img${counter}`).setAttribute('src', imageURL);
+    
+                        counter++;
+                    }
+                }
+            );
+        }
+      );
+    }
 // pancake banner
 const currentDate = new Date();
 const aside = document.querySelector('aside');
@@ -70,12 +100,3 @@ function adjustRating(rating) {
     document.querySelector('#rating').textContent = rating;
 }
 
-// font loader
-WebFont.load({
-    google: {
-      families: [
-         'Josefin Sans',
-         'Raleway'
-      ]
-    }
-  });
