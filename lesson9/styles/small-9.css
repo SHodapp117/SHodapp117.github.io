@@ -154,12 +154,21 @@ input[type=submit], input[type=reset] {
 }
 
 article {
+    padding: 10px;
+    margin: 30px;
+    background-color: rgba(134, 138, 143, 0.575);
+    height: 600px;
+    width: 300px;
+    color: rgb(10, 10, 10);
+    border-radius: 5px;
+    text-align: center;
     border: 2px dotted white;
     box-shadow: 0 0 15px 0 powderblue;
 }
 
 article img {
-    width: auto;
+    width: fit-content;
+    height: fit-content;
 }
 
 img[data-src] {
@@ -220,9 +229,8 @@ img {
 }
 
 #article img {
-    float: right;
-    margin: 0 0 1em 1em;
-    width: auto;
+    height: 250px;
+    width: 250px;
 }
 
 #hero {
@@ -258,4 +266,5 @@ img {
 
 #fishName, #prestonName, #ssName {
     text-shadow: 2px 2px 3px lightcoral;
+    
 }
