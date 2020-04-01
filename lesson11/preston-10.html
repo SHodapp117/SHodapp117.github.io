@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,10 @@
     <link rel="stylesheet" href="styles/medium-11.css">
     <link rel="stylesheet" href="styles/large-11.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    </head>
+</head>
+
 <body>
+
     <body onload="getEvents('Preston'); getCurrentWeather('5604473'); getFiveDayForecast('5604473')"></body>
     <header>
         <img src="images/icon.gif" alt="weather logo">
@@ -35,9 +38,9 @@
     <main>
         <h1 id="preston">Preston</h1>
         <section id="hero">
-            
+
             <picture>
-                <source srcset="images/soda.jpeg" media ="(max-width: 500px)">
+                <source srcset="images/soda.jpeg" media="(max-width: 500px)">
                 <source srcset="images/smalltown.jpeg" media="(max-width: 780px)">
                 <source srcset="images/cit230_image_franklinOriginal.jpeg" media="(max-width: 1050px)">
                 <img src="images/cit230_image_franklinOriginal.jpeg" alt="hero image">
@@ -46,7 +49,7 @@
                 <h2>Weather Summary</h2>
                 <div>
                     <span id="weatherDesc"></span>
-                    <img id="weatherImg" src="" alt="" >
+                    <img id="weatherImg" src="" alt="">
                 </div>
                 <div>
                     <span>Current Temperature:</span>
@@ -100,39 +103,48 @@
         <section id="article">
             <img src="images/smalltown.jpeg" alt="Preston, ID">
             <p> Latest News from The Preston Presser:</p>
-                <p>
-                    Officials say an electrical fault in a light fixture caused a house fire that killed twin 3-year-old Idaho boys:
+            <p>
+                Officials say an electrical fault in a light fixture caused a house fire that killed twin 3-year-old
+                Idaho boys:
 
-                    The fire happened early Friday in the town of Weippe. By the time firefighters arrived the home was fully engulfed. 
-                    The mother of the children told investigators the twins were sleeping in the living room when she went to bed around midnight. 
-                    She woke up to smoke and alerted the father. They said they tried to rescue the children but was driven back by heavy smoke and heat. 
-                    The bodies of Shawn and John Carr were recovered after five hours of searching.
+                The fire happened early Friday in the town of Weippe. By the time firefighters arrived the home was
+                fully engulfed.
+                The mother of the children told investigators the twins were sleeping in the living room when she went
+                to bed around midnight.
+                She woke up to smoke and alerted the father. They said they tried to rescue the children but was driven
+                back by heavy smoke and heat.
+                The bodies of Shawn and John Carr were recovered after five hours of searching.
 
-                    Power was cut on Thursday on the east side of Preston for 673 Pacificorp power customers.
+                Power was cut on Thursday on the east side of Preston for 673 Pacificorp power customers.
 
-                    During the outage, crews worked from 10 a.m. to 4 p.m., installing close to 20 new power poles in the area and performing maintenance on existing poles.
-                    The timing of the maintenance, according to Pacificorp’s Preston Station operations manager, Rett Sage, was to coincide with the widening of East Oneida. “
-                    Though maintenance work can be completed, in some instances, while power lines are still active, it is safer for linemen to cut the power to complete their work.
-                    Extra crews from Montpelier and Lava Hot Springs came to the area to help complete the project.
-                    Some poles were replaced with new raptor-safe poles which are designed to mitigate or eliminate electrocution of raptors that perch on the lines.
-                </p>
+                During the outage, crews worked from 10 a.m. to 4 p.m., installing close to 20 new power poles in the
+                area and performing maintenance on existing poles.
+                The timing of the maintenance, according to Pacificorp’s Preston Station operations manager, Rett Sage,
+                was to coincide with the widening of East Oneida. “
+                Though maintenance work can be completed, in some instances, while power lines are still active, it is
+                safer for linemen to cut the power to complete their work.
+                Extra crews from Montpelier and Lava Hot Springs came to the area to help complete the project.
+                Some poles were replaced with new raptor-safe poles which are designed to mitigate or eliminate
+                electrocution of raptors that perch on the lines.
+            </p>
         </section>
         <section id="events">
             <h3>Upcoming Events:</h3>
             <hr>
             <ul id="event">
             </ul>
-        <section id="contact">
-            <address>
-                <h3>Better Weather</h3> <br>
-                1234 Main Street <br>
-                South Canada Idaho <br>
-                999-999-9999 <br>
-                betterweather@gmail.com
-            </address>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54766.67601801872!2d-111.91534435880683!3d42.09974162641247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e1!3m2!1sen!2sus!4v1581204904345!5m2!1sen!2sus" 
-            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </section>
+            <section id="contact">
+                <address>
+                    <h3>Better Weather</h3> <br>
+                    1234 Main Street <br>
+                    South Canada Idaho <br>
+                    999-999-9999 <br>
+                    betterweather@gmail.com
+                </address>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54766.67601801872!2d-111.91534435880683!3d42.09974162641247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e1!3m2!1sen!2sus!4v1581204904345!5m2!1sen!2sus"
+                    width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </section>
     </main>
     <footer>
         <p>&copy; Better Weather ||| Spencer Hodapp <span id="currentDate"></span> </p>
@@ -142,4 +154,5 @@
     <script src="scripts/town.js"></script>
     <script src="scripts/towndata.js"></script>
 </body>
+
 </html>
