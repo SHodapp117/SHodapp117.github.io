@@ -1,14 +1,9 @@
 var templeID = getQueryVariable('id');
-var pageDataURL = "https://npetersen.github.io/my-temple-stay/data/mts.json";
+var pageDataURL = "https://github.com/SHodapp117/SHodapp117.github.io/blob/master/templeproject/data/temples.json";
 var weatherDataURL = "https://api.openweathermap.org/data/2.5/weather?id=" + templeID + "&units=imperial&appid=003d0dc716b994bd0c126c319d745b07";
 var iconURL = "https://openweathermap.org/img/w/";
 var pageDataRequest;
 var weatherDataRequest;
-
-if (!templeID || templeID.length != 7) {
-    alert('A valid temple identifier is required. Please choose a temple from the main navigation menu');
-    location.href = 'index.html';
-}
 
 pageDataRequest = new XMLHttpRequest();
 pageDataRequest.open('GET', pageDataURL);
@@ -28,16 +23,7 @@ pageDataRequest.onload = function() {
     populatePageContent(pageData);
     console.log(pageData);
     
-    $.backstretch(pageData.images[randNum], { 
-        duration: 4000, 
-        fade: "normal", 
-        overlay: {
-            init: true,
-            background: "#111111", 
-            opacity: 0.7
-        }
-    });
-
+  
     $('.temple-slideshow').backstretch(pageData.images, {
         duration: 5000,
         fade: "normal",
