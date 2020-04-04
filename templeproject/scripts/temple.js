@@ -1,106 +1,60 @@
-var templeID = getQueryVariable('id');
-var pageDataURL = "https://github.com/SHodapp117/SHodapp117.github.io/blob/master/templeproject/data/temples.json";
-var weatherDataURL = "https://api.openweathermap.org/data/2.5/weather?id=" + templeID + "&units=imperial&appid=003d0dc716b994bd0c126c319d745b07";
-var iconURL = "https://openweathermap.org/img/w/";
-var pageDataRequest;
-var weatherDataRequest;
-
-
-function populatePageContent(json) {
-    var templeName = json.name;
-    var titleText = "Details About The " + templeName + " Temple";
-    var templeSvcSection = document.getElementById('temple-services-list');
-    var templeSvcUL = document.createElement('ul');
-    var templeCloseSection = document.getElementById('temple-closure-list');
-    var templeClseUL = document.createElement('ul');
-    var templeHistSection = document.getElementById('temple-history-list');
-    var templeHistUL = document.createElement('ul');
-    var templeSessSection = document.getElementById('temple-schedule-list');
-    var templeSessUL = document.createElement('ul');
-
-    document.title = "My Temple Stay | " + titleText;
-    $('#temple-page-h1').html("The " + templeName + " Temple");
-    $('#temple-info-h3').html(templeName + " Temple Information");
-    $('#temple-address').html(json.address.address1 + "<br>" + json.address.city + ", " + json.address.state + " " + json.address.zip + json.address.zip_4);
-    $('#temple-phone').html(json.phone);
-    $('#temple-email').html(json.email);
-    $('#temple-description').html(json.description);
-
-    for (iSvc = 0; iSvc < json.services.length; iSvc++) {
-        var svcItem = document.createElement('li');
-        svcItem.textContent = json.services[iSvc];
-        templeSvcUL.appendChild(svcItem);
-    }
-
-    for (iCls = 0; iCls < json.closures.length; iCls++) {
-        var clsItem = document.createElement('li');
-        clsItem.textContent = json.closures[iCls];
-        templeClseUL.appendChild(clsItem);
-    }
-
-    for (iHst = 0; iHst < json.history.length; iHst++) {
-        var hstItem = document.createElement('li');
-        hstItem.textContent = json.history[iHst];
-        templeHistUL.appendChild(hstItem);
-    }
-
-    for (iSes = 0; iSes < json.session_schedule.length; iSes++) {
-        var sessItem = document.createElement('li');
-        sessItem.textContent = json.session_schedule[iSes];
-        templeSessUL.appendChild(sessItem);
-    }
-
-    templeSvcSection.appendChild(templeSvcUL);
-    templeCloseSection.append(templeClseUL);
-    templeHistSection.append(templeHistUL);
-    templeSessSection.append(templeSessUL);
-}
-
-function populateWeatherData(json) {
-    var weatherData = json;
-    var weatherIcon = document.getElementById('weather-icon');
-    var weatherAtGlance = document.getElementById('weather-at-glance');
-    var currentCondition = document.getElementById('current-condition');
-    var currentTemp = document.getElementById('current-temp');
-    var currentHumidity = document.getElementById('current-humidity');
-    var currentPrecip = document.getElementById('current-precip');
-    var windSpeed = document.getElementById('wind-speed');
-
-    if (weatherIcon) { weatherIcon.src = iconURL + weatherData.weather[0].icon + '.png' }
-    if (weatherAtGlance) { weatherAtGlance.innerHTML = weatherData.weather[0].description + " " + Math.round(weatherData.main.temp) + "&deg" }
-    if (currentCondition) { currentCondition.innerHTML = weatherData.weather[0].description }
-    if (currentTemp) { currentTemp.innerHTML = Math.round(weatherData.main.temp) + "&deg; F"; }
-    if (currentHumidity) { currentHumidity.innerHTML = weatherData.main.humidity + "%"; }
-    if (currentPrecip && weatherData.hasOwnProperty('rain')) { 
-        currentPrecip.innerHTML = weatherData.rain['1h'] + " inches"; 
-    } else {
-        currentPrecip.innerHTML = "Not Available"
-    }
-    if (windSpeed) { windSpeed.innerHTML = weatherData.wind.speed + " mph" }
-}
-
-function getImagesArray(json) {
-    for (var iOut = 0; iOut < json.temples.length; iOut++) {
-        matchFound = json.temples[iOut].id == templeID;
-        if (matchFound) {
-            for (var iIn = 0; iIn < json.temples[iOut].images.length; iIn++) {
-                slideshowImages.push(json.temples[iOut].images[iIn]);
-            }
+fetch('templeproject/data/temples.json')
+    .then(
+        result => {
+            return result.json();
         }
-    }
-    return slideshowImages;
-}
+    )
+    .then(
+        resultJSON => {
+            let temples = resultJSON.temples;
 
-function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (pair[0] == variable) {
-            return pair[1];
+            temples.forEach (
+                temple => {
+                    if (temple.name === 'Ogden') {
+                        document.querySelector('#ogdenName').textContent = temple.name;
+                        document.querySelector('#ogdenAddress').textContent = temple.address;
+                        document.querySelector('#ogdenPhone').textContent = `Phone Number: ${temple.phone}`;
+                        document.querySelector('#ogdenEmail').textContent = `Email: ${temple.email}`;
+                        document.querySelector('#ogdenServices').textContent = `Services Offered: ${temple.services}`;
+                        document.querySelector('#ogdenClosures').textContent = `Clousures: ${temple.closures}`;
+                        document.querySelector('#ogdenDiscription').textContent = `Discription: ${temple.description}`;
+                        document.querySelector('#ogdenSession').textContent = `Sessions: ${temple.session_schedule}`;
+                        document.querySelector('#ogdenHistory').textContent = `Temple History: ${temple.history}`;
+                }
+                else if (temple.name === 'Salt Lake') {
+                        document.querySelector('#slName').textContent = temple.name;
+                        document.querySelector('#slAddress').textContent = temple.address;
+                        document.querySelector('#slPhone').textContent = `Phone Number: ${temple.phone}`;
+                        document.querySelector('#slEmail').textContent = `Email: ${temple.email}`;
+                        document.querySelector('#slServices').textContent = `Services Offered: ${temple.services}`;
+                        document.querySelector('#slClosures').textContent = `Clousures: ${temple.closures}`;
+                        document.querySelector('#slDiscription').textContent = `Discription: ${temple.description}`;
+                        document.querySelector('#slSession').textContent = `Sessions: ${temple.session_schedule}`;
+                        document.querySelector('#slHistory').textContent = `Temple History: ${temple.history}`;
+                }
+                else if (town.name === 'Bountiful') {
+                        document.querySelector('#BountifulName').textContent = temple.name;
+                        document.querySelector('#BountifulAddress').textContent = temple.address;
+                        document.querySelector('#BountifulPhone').textContent = `Phone Number: ${temple.phone}`;
+                        document.querySelector('#BountifulEmail').textContent = `Email: ${temple.email}`;
+                        document.querySelector('#BountifulServices').textContent = `Services Offered: ${temple.services}`;
+                        document.querySelector('#BountifulClosures').textContent = `Clousures: ${temple.closures}`;
+                        document.querySelector('#BountifulDiscription').textContent = `Discription: ${temple.description}`;
+                        document.querySelector('#BountifulSession').textContent = `Sessions: ${temple.session_schedule}`;
+                        document.querySelector('#BountifulHistory').textContent = `Temple History: ${temple.history}`;
+                    }
+                else if (town.name === 'Brigham City') {
+                        document.querySelector('#bcName').textContent = temple.name;
+                        document.querySelector('#bcAddress').textContent = temple.address;
+                        document.querySelector('#bcPhone').textContent = `Phone Number: ${temple.phone}`;
+                        document.querySelector('#bcEmail').textContent = `Email: ${temple.email}`;
+                        document.querySelector('#bcServices').textContent = `Services Offered: ${temple.services}`;
+                        document.querySelector('#bcClosures').textContent = `Clousures: ${temple.closures}`;
+                        document.querySelector('#bcDiscription').textContent = `Discription: ${temple.description}`;
+                        document.querySelector('#bcSession').textContent = `Sessions: ${temple.session_schedule}`;
+                        document.querySelector('#bcHistory').textContent = `Temple History: ${temple.history}`;
+                    }
+            
+            })
         }
-    }
-    
-    return(false);
-}
+    );
