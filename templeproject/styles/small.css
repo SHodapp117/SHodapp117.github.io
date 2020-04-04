@@ -131,7 +131,6 @@ a:link:hover {
 
 .nav-list {
     display: block;
-    /* width: 100%; */
     position: static;
     line-height: 1rem;
     z-index: 1012;
@@ -168,7 +167,7 @@ a:link:hover {
     grid-template-columns: 100%;
     grid-gap: 1rem;
 }
-}
+
 
 .align-left {
     text-align: left;
