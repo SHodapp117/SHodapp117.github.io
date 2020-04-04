@@ -61,7 +61,7 @@
                     <input type="date" id="tripDate" name="tripDate">
                 </div>
                 <div>
-                    <label for="temple">Temple: </label>
+                    <label for="temple">Temple Service Information Request: </label>
                     <input list="temple" name="temple">
                     <datalist id="temple">
                         <option value="Brigham City">
@@ -69,40 +69,6 @@
                         <option value="Bountiful">
                         <option value="Salt Lake">
                     </datalist>
-                </div>
-                <div>
-                    <label for="lengthofStay">Length of Stay (Weeks): </label>
-                    <input type="range" id="lengthofStay" name="lengthofStay" min="1" max="10" step="1" value="5" 
-                    list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-                    <span id="rating">10</span>
-                    <datalist id="tickmarks">
-                        <option value="0">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
-                        <option value="4">
-                        <option value="5">
-                        <option value="6">
-                        <option value="7">
-                        <option value="8">
-                        <option value="9">
-                        <option value="10">
-                    </datalist>
-                </div>
-                
-                    <label for="translation">Do you need Translation services?: </label>
-                    <label for="">
-                        <input type="radio" value="yes" id="translation" name="translation">
-                        Yes
-                    </label>
-                    <label for="">
-                        <input type="radio" value="no" id="translation" name="translation">
-                        No
-                    </label>
-                    <label for="">
-                        <input type="radio" value="maybe" id="translation" name="translation">
-                        Maybe
-                    </label>
                 </div>
                 <div>
                     <label for="additionalComments">Additional Comments: </label>

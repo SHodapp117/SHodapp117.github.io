@@ -170,6 +170,14 @@ img {
     transition: filter 1s;
 }
 
+.flex-form{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .grid-main {
     margin: 0 auto;
     max-width: 1820px;
@@ -214,6 +222,18 @@ img {
 }
 
 
+.flex-form{
+    color: #465775;
+}
+
+#form{
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
 
 #website {
     font-size: 40px;
