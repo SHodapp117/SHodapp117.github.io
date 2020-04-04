@@ -2,9 +2,7 @@
     html {
         font-size: 13px;
     }
-    /* body {
-        width: 80%;
-    } */
+    
     .has-logo {
         display: none;
     }
@@ -12,5 +10,18 @@
         display: block;
         margin: 0 auto;
         text-align: center;
+    }
+    .landing-content-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        max-width: 50%;
+    }
+    .landing-featured-contact {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
     }
 }
