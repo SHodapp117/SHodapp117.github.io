@@ -1,16 +1,32 @@
-@media only screen and (max-width: 58.75rem) {
-    html {
-        font-size: 13px;
+@media only screen and (min-width: 32.5em) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    /* body {
-        width: 80%;
-    } */
-    .has-logo {
-        display: none;
+
+    .navigation li:first-child {
+		display: none;
     }
-    .mobile-display {
+    
+    .navigation li {
         display: block;
-        margin: 0 auto;
-        text-align: center;
+    }
+
+    iframe{
+        display: block;
+    }
+
+    #five-day-forecast {
+        display: block;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
     }
 }

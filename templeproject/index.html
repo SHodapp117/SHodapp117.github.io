@@ -1,62 +1,40 @@
 <!doctype html>
-<html class="no-js" lang="en-us">
-
+<html lang="en-us">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description"
-        content="My Temple Stay is a hotel chain headquartered in Bethesda, MD that builds and manages specialized hotel accommodations near temple locations of The Church of Jesus Christ of Latter-day Saints around the world.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Contact My Temple Stay. A hotel chain headquartered in Bethesda, MD that builds and manages specialized hotel accommodations near temple locations of The Church of Jesus Christ of Latter-day Saints around the world.">
     <meta name="viewport" content="width=device-width, intial-scale=1, maximum-scale=5">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    </head>
-    
-    <title>My Temple Stay | Like you never left home!</title>
+    <title>My Temple Stay | Contact Us</title>
+    <link rel="icon" type="image/gif" sizes="16x16" href="images/moronisitelogo.jpg">
 </head>
 
 <body>
 
-    <div class="mobile-display">
-        <h2 class="site-title">
-            <a href="#">
-                <img src="images/mtslogo.jpg" alt="My Temple Stay">
-            </a>
-        </h2>
-    </div>
-
     <header>
+        <img src="images/templelogo.jpg" alt="Temple Logo">
+        <div class="header">
+            <h1 id="website">My Temple Stay</h1>
+            <h3>Here at Home</h3>
+        </div>
+    </header>
+
+    
         <nav>
-            <a href="#" class="toggle-menu">&#9776;</a>
-            <ul class="nav-list nav-open" id="nav">
-                <li>
-                    <a href="reservations.html">Reservations</a>
-                </li>
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-                <li class="has-logo">
-                    <a href="index.html">
-                        <h2 class="site-title">
-                            <img src="images/mtslogo.jpg" alt="My Temple Stay">
-                        </h2>
-                    </a>
-                </li>
-                <li class="has-submenu">
-                    <a href="#">Temples</a>
-                    <ul>
-                        <li><a href="temple.html?id=5771960">Brigham City</a></li>
-                        <li><a href="temple.html?id=5779206">Ogden</a></li>
-                        <li><a href="temple.html?id=5771826">Bountiful</a></li>
-                        <li><a href="temple.html?id=5780993">Salt Lake</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+            <ul class="navigation">
+                <li><a class="ham" href="#">&#9776; Menu</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="temple.html">Temples</a></li>
             </ul>
         </nav>
-    </header>
 
     <main>
         <div class="landing-content-container">
@@ -100,21 +78,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            var ulNav = "#nav";
-            var openNav = "active";
-
-            $('.toggle-menu').click(function (e) {
-                if ($(ulNav).hasClass(openNav)) {
-                    $(ulNav).removeClass(openNav);
-                } else {
-                    $(ulNav).addClass(openNav);
-                }
-                e.preventDefault();
-            })
-        })
-    </script>
+   
 </body>
 
 </html>

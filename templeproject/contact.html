@@ -37,18 +37,81 @@
         </nav>
     
 
-    <main>
-            <h1>Contact Us</h1>
-    
-            <form>
-                <ul class="flex-form">
-                    <li><label for="first-name">First Name</label><input type="text" id="first-name" placeholder="Enter your first name"></li>
-                    <li><label for="last-name">Last Name</label><input type="text" id="last-name" placeholder="Enter your last name"></li>
-                    <li><label for="email">Email</label><input type="email" id="email" placeholder="Enter your email"></li>
-                    <li><label for="phone">Phone</label><input type="tel" id="phone" placeholder="Enter your phone"></li>
-                    <li><label for="message">Message</label><textarea rows="6" id="message" placeholder="Enter your message"></textarea></li>
-                    <li><button class="cta-home" type="submit">Get In Touch!</button></li>
-                </ul>
+        <main>
+            <h1 id="preston">Reservations</h1>
+            <form action="thanks.html" method="GET">
+                <div>
+                    <label for="fullName">Full Name: </label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="email@gmail.com">
+                </div>
+                <div>
+                    <label for="phoneNumber">Phone Number: </label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <div>
+                    <label for="zipCode">Zip Code: </label>
+                    <input type="number" id="zipCode" name="zipCode" required>
+                </div>
+                <div>
+                    <label for="tripDate">Trip Date: </label>
+                    <input type="date" id="tripDate" name="tripDate">
+                </div>
+                <div>
+                    <label for="temple">Temple: </label>
+                    <input list="temple" name="temple">
+                    <datalist id="temple">
+                        <option value="Brigham City">
+                        <option value="Ogden">
+                        <option value="Bountiful">
+                        <option value="Salt Lake">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="lengthofStay">Length of Stay (Weeks): </label>
+                    <input type="range" id="lengthofStay" name="lengthofStay" min="1" max="10" step="1" value="5" 
+                    list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                    <span id="rating">10</span>
+                    <datalist id="tickmarks">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+                </div>
+                
+                    <label for="translation">Do you need Translation services?: </label>
+                    <label for="">
+                        <input type="radio" value="yes" id="translation" name="translation">
+                        Yes
+                    </label>
+                    <label for="">
+                        <input type="radio" value="no" id="translation" name="translation">
+                        No
+                    </label>
+                    <label for="">
+                        <input type="radio" value="maybe" id="translation" name="translation">
+                        Maybe
+                    </label>
+                </div>
+                <div>
+                    <label for="additionalComments">Additional Comments: </label>
+                    <textarea name="additionalComments" id="additionalComments" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
             </form>
             <article>
                 <p>My Temple Stay is owned and operated by Temple Inn & Suites, a hotel chain headquartered in Bethesda, MD that builds and manages specialized hotel accommodations near temple locations of The Church of Jesus Christ of Latter-day Saints around
