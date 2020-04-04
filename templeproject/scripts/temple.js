@@ -5,39 +5,6 @@ var iconURL = "https://openweathermap.org/img/w/";
 var pageDataRequest;
 var weatherDataRequest;
 
-pageDataRequest = new XMLHttpRequest();
-pageDataRequest.open('GET', pageDataURL);
-pageDataRequest.responseType = 'json';
-pageDataRequest.send();
-
-weatherRequest = new XMLHttpRequest();
-weatherRequest.open('GET', weatherDataURL);
-weatherRequest.responseType = 'json';
-weatherRequest.send();
-
-pageDataRequest.onload = function() {
-
-    var randNum = Math.floor(Math.random() * 3) + 0;
-    var pageData = pageDataRequest.response;
-    pageData = pageData.temples.find(x => x.id == templeID);
-    populatePageContent(pageData);
-    console.log(pageData);
-    
-  
-    $('.temple-slideshow').backstretch(pageData.images, {
-        duration: 5000,
-        fade: "normal",
-        overlay: {
-            init: false
-        }
-    });
-
-}
-
-weatherRequest.onload = function() {
-    var weatherData = weatherRequest.response;
-    populateWeatherData(weatherData);
-}
 
 function populatePageContent(json) {
     var templeName = json.name;

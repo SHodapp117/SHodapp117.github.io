@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/normalize.css">
     </head>
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
     <title>My Temple Stay | Services and Amenities</title>
 </head>
 
@@ -112,36 +112,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/wayfind.js"></script>
-    <script>
-        $(document).ready(function() {
-            var ulNav = "#nav";
-            var openNav = "active";
 
-            $('.toggle-menu').click(function(e) {
-                if ($(ulNav).hasClass(openNav)) {
-                    $(ulNav).removeClass(openNav);
-                } else {
-                    $(ulNav).addClass(openNav);
-                }
-                e.preventDefault();
-            });
-
-            $('.room-slideshow').backstretch([
-                "img/room-img-1.jpg",
-                "img/room-img-2.jpg",
-                "img/room-img-3.jpg",
-                "img/room-img-4.jpg"
-            ], {
-                duration: 4000,
-                fade: "normal",
-                overlay: {
-                    init: false,
-                    background: "#111111",
-                    opacity: 0.7
-                }
-            });
-        })
-    </script>
 
 </body>
 
