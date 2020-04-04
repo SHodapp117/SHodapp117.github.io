@@ -1,4 +1,4 @@
-fetch('templeproject/data/temples.json')
+fetch('https://github.com/SHodapp117/SHodapp117.github.io/blob/master/templeproject/data/temples.json')
     .then(
         result => {
             return result.json();
