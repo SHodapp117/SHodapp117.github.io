@@ -1,0 +1,1 @@
+This is part of the 2-semester long project in web development I took during my undergraduate degree. I have included this in my project portolio because I was proud of how well I was able to do this. open the index.html, in a run time instance and you can look through a simple webpage with a single API.
